@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## ER図
+https://i.gyazo.com/e4532435d8e7e483865381522cf0db00.png
