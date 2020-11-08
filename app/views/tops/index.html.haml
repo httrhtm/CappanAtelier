@@ -1,1 +1,25 @@
-%h1 トップページ
+.home-header
+  .home-wrapper
+    .home-header
+      .home-header-contents
+        .home-header-top
+          .app-icon-box
+            =link_to image_tag("/1_Primary_logo_on_transparent_239x69.png"),"/"
+          .home-menu
+            %ul.menu-lists
+              %li.menu-option
+                =link_to "アーカイブ", "/"
+              %li.menu-option
+                =link_to "ログイン", "/"
+
+        .header-message-box
+          %h1 活版印刷の工房探し
+          %p 活版印刷のサービスやワークショップを探すことができます。
+
+        .home-search-form
+          .form-explanation エリア・キーワードから探す
+          .search-box
+            %form.shop_search
+              %input{class: "search-box__content left-content", name: "key", type: "text", placeholder: "キーワード[例:活版印刷]"}
+              %input{class: "search-box__content right-content", name: "key", type: "text", placeholder: "エリア[例:東京]"}
+              %input{type: "submit", value: "検索", class: "search-box__submit"}
