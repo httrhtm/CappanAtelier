@@ -1,0 +1,193 @@
+.clearfix:before {
+  display: table;
+  content: " ";
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.home-main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1600px;
+  min-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 64px;
+  .search-main {
+    min-width: 800px;
+    width: 960px;
+    padding: 32px;
+    .search-area {
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .seach-area__area {
+        margin-top: 16px;
+        padding: 12px 24px;
+        border: solid 1px lightgray;
+        border-radius: 4px;
+        box-shadow: 0 0 4px lightgrey;
+        .selected-area {
+          display: flex;
+          align-items: center;
+          padding: 8px;
+          .selected-area__name {
+            margin-right: 24px;
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .selected-area__store-count {
+            font-size: 16px;
+          }
+        }
+        .top-areas {
+          display: flex;
+          .top-area {
+            a {
+              text-decoration: none;
+              color: black;
+            }
+            .top-area-link {
+              display: flex;
+              align-items: center;
+              height: 48px;
+              margin: 4px;
+              padding: 0 16px 0;
+              border: solid 1px lightgray;
+              border-radius: 4px;
+              box-shadow: 0 0 4px lightgrey;
+              cursor: pointer;
+              .top-area-box {
+                .top-area-name {
+                  font-size: 16px;
+                  font-weight: bold;
+                }
+                .top-area-shop-count {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        .area-list {
+          padding: 20px 8px 4px 8px;
+          width: 100%;
+          .all-area:before {
+            position: absolute;
+            top: .35em;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-width: 4px;
+            border-style: solid;
+            border-color: transparent transparent transparent orange;
+            content: "";
+          }
+          .all-area {
+            float: left;
+            position: relative;
+            width: 25%;
+            height: 28px;
+            padding-left: 12px;
+            font-size: 12px;
+            cursor: pointer;
+          }
+          a {
+            text-decoration: none;
+            color: #4444db;
+          }
+        }
+      }
+    }
+    .search-service {
+      &__title {
+        margin-top: 80px;
+        margin-bottom: 16px;
+      }
+      &__area {
+        .top-services {
+          display: flex;
+          .top-service {
+            .top-service-link {
+              position: relative;
+              display: block;
+              width: 136px;
+              margin: 8px 8px 8px 0;
+              color: white;
+              font-weight: bold;
+              text-align: center;
+              cursor: pointer;
+              .top-service__img {
+                height: 136px;
+                width: 136px;
+                object-fit: cover;
+              }
+              .top-service__name {
+                position: absolute;
+                bottom: 32px;
+                width: 100%;
+                font-size: 16px;
+              }
+              .top-service__store-count {
+                position: absolute;
+                bottom: 16px;
+                width: 100%;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .service-list {
+          display: flex;
+          .all-service {
+            .service-link {
+              float: left;
+              padding: 6px 16px;
+              margin: 4px 8px 4px 0;
+              border: solid 1px lightgray;
+              border-radius: 4px;
+              box-shadow: 0 0 4px lightgrey;
+              color: #424242;
+              font-size: 12px;
+              white-space: nowrap;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .search-feature {
+      &__title {
+        margin-top: 80px;
+        margin-bottom: 5px;
+      }
+      .slide-wrapper {
+        position: relative;
+        margin: 0 auto;
+        max-width: 980px;
+        .swiper-container {
+          margin: 0 auto;
+          position: relative;
+          overflow: hidden;
+          list-style: none;
+          padding: 0;
+          z-index: 1;
+          .swiper-wrapper {
+            margin-top: 15px;
+            .swiper-slide {
+              position: relative;
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

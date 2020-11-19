@@ -1,0 +1,123 @@
+.home-main
+  .search-main
+    .search-area
+      %h2.seach-area__title
+        %span エリアから探す
+      .seach-area__area
+        -# .selected-area
+        -#   .selected-area__name
+        -#     %span 全国
+        -#   .selected-area__store-count
+        -#     %span 45件
+        %ul.top-areas
+          %li.top-area
+            .top-area-link
+              .top-area-box
+                %span.top-area-name 東京
+                %span.top-area-shop-count 10件
+          %li.top-area
+            .top-area-link
+              .top-area-box
+                %span.top-area-name 愛知
+                %span.top-area-shop-count 10件
+          %li.top-area
+            .top-area-link
+              .top-area-box
+                %span.top-area-name 大阪
+                %span.top-area-shop-count 10件
+          %li.top-area
+            .top-area-link
+              .top-area-box
+                %span.top-area-name 神奈川
+                %span.top-area-shop-count 10件
+          %li.top-area
+            .top-area-link
+              .top-area-box
+                %span.top-area-name 福岡
+                %span.top-area-shop-count 10件
+        %ul.area-list.clearfix
+          %li.all-area
+            %span 北海道・東北
+          %li.all-area
+            %span 関東
+          %li.all-area
+            %span 中部
+          %li.all-area
+            %span 関西
+          %li.all-area
+            %span 中国・四国
+          %li.all-area
+            %span 九州・沖縄
+    .search-service
+      %h2.search-service__title
+        %span つくれるモノから探す
+      .search-service__area
+        %ul.top-services
+          %li.top-service
+            %a.top-service-link
+              = image_tag '/770631_s.jpg', class: 'top-service__img'
+              .top-service__name
+                %span 名刺
+              .top-service__store-count
+                %span 25件
+          %li.top-service
+            %a.top-service-link
+              = image_tag '/770631_s.jpg', class: 'top-service__img'
+              .top-service__name
+                %span 名刺
+              .top-service__store-count
+                %span 25件
+          %li.top-service
+            %a.top-service-link
+              = image_tag '/770631_s.jpg', class: 'top-service__img'
+              .top-service__name
+                %span 名刺
+              .top-service__store-count
+                %span 25件
+          %li.top-service
+            %a.top-service-link
+              = image_tag '/770631_s.jpg', class: 'top-service__img'
+              .top-service__name
+                %span 名刺
+              .top-service__store-count
+                %span 25件
+          %li.top-service
+            %a.top-service-link
+              = image_tag '/770631_s.jpg', class: 'top-service__img'
+              .top-service__name
+                %span 名刺
+              .top-service__store-count
+                %span 25件
+        %ul.service-list.clearfix
+          %li.all-service
+            %a.service-link
+              %span カード
+          %li.all-service
+            %a.service-link
+              %span カード
+          %li.all-service
+            %a.service-link
+              %span カード
+          %li.all-service
+            %a.service-link
+              %span カード
+          %li.all-service
+            %a.service-link
+              %span カード
+          %li.all-service
+            %a.service-link
+              %span カード
+    .search-feature
+      %h2.search-feature__title
+        %span 特集
+      .slide-wrapper
+        .swiper-container
+          %ul.swiper-wrapper.slick
+            %li.swiper-slide
+              =link_to image_tag("/1694959_m.jpg"),"/"
+            %li.swiper-slide
+              =link_to image_tag("/1694959_m.jpg"),"/"
+            %li.swiper-slide
+              =link_to image_tag("/1694959_m.jpg"),"/"
+            %li.swiper-slide
+              =link_to image_tag("/1694959_m.jpg"),"/"
