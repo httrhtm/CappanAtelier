@@ -1,7 +1,7 @@
 .footer {
   min-width: 1280px;
   width: 100%;
-  background-color: #F0EADE;
+  background-color: #A98752;
   .footer-wrap {
     height: 128px;
     max-width: 1600px;
@@ -12,14 +12,14 @@
       display: flex;
       align-items: center;
       height: 50%;
-      border-bottom: solid 1px #A98752;
+      border-bottom: solid 1px lightgray;
       text-align: center;
       .language-list {
         display: flex;
         align-items: center;
         width: 320px;
         margin: 0 auto;
-        color: black;
+        color: lightgray;
         font-size: 12px;
         .language-title {
           width: 16%;
@@ -37,7 +37,7 @@
       align-items: center;
       justify-content: space-between;
       height: 50%;
-      color: black;
+      color: lightgray;
       .sitemap {
         display: flex;
         margin: 0 auto;
@@ -45,7 +45,7 @@
           padding: 0 8px;
           font-size: 12px;
           a {
-            color: black;
+            color: lightgray;
           }
         }
       }
