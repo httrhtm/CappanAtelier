@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  font-family: 'メイリオ', 'Meiryo', 'ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-x: scroll;
+  .main {
+    .wrapper {
+      max-width: 1600px;
+      min-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 240px 0;
+    }
+  }  
+}
