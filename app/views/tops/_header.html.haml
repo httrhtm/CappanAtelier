@@ -10,6 +10,8 @@
               =link_to "アーカイブ", "/"
             %li.menu-option
               =link_to "マイページ", "/"
+            %li.menu-option
+              =link_to "ログアウト", destroy_user_session_path, method: :delete
           - else
             %li.menu-option
               =link_to "アーカイブ", "/"

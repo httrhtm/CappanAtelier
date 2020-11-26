@@ -11,21 +11,14 @@
               %li.menu-option
                 = link_to '新規店舗登録'
             %li.menu-option
-              = link_to '保存済み'
+              = link_to 'アーカイブ'
             %li.menu-option
-              = link_to 'マイページ'
-          .user-nav.js-user-nav
-            = user_icon_present?(current_user)
-            %ul.user-nav-popup
-              %li.user-nav-option
-                = link_to "設定", "/"
-              %li.user-nav-option
-                = link_to "ログアウト", "/"
+              = link_to 'ログアウト'
         - else
           %ul.menu-list
             %li.menu-option
               = link_to '行ったお店', new_user_session_path
             %li.menu-option
-              = link_to '保存済み', new_user_session_path
+              = link_to 'アーカイブ', new_user_session_path
             %li.menu-option
               = link_to 'ログイン', new_user_session_path
