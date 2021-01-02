@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   }
   root "tops#index"
 
-  resources :shops, only: [:index, :show]
+  resources :shops, only: [:index, :new, :create, :show]
   resources :registration, only: [:new, :create]
 end

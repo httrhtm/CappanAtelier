@@ -1,7 +1,62 @@
 = form_for @shop do |f|
-  = f.text_field :name, placeholder: 'ショップ名'
-  = f.text_area :outline, placeholder: 'ショップ紹介'
-  = f.label :image, class: 'image' do
-    = icon('far', 'image', class: 'image-icon fa-lg')
-    = f.file_field :image, class: 'image-file'
-  = f.submit '登録', class: 'send-btn'
+  .field
+    .field__label
+      = f.label :name, '店舗名'
+      %span.require *
+    .field__input
+      = f.text_field :name, placeholder: '店舗名', class: 'field__input--text-type', required: :true
+  .field
+    .field__label
+      = f.label :outline, '店舗紹介'
+    .field__input
+      = f.text_area :outline, placeholder: '店舗紹介', class: 'field__input--textarea'
+  .field
+    .field__label
+      = f.label :image, '店舗画像', class: 'image'
+      %span.require *
+    .field__input
+      #image-box
+        - if @shop.persisted? && @shop.shop_images.count > 0
+          - @shop.shop_images.each_with_index do |image, i|
+            = image_tag image.shop_image.url, data: { index: i }, width: "118", height: '80'
+          = f.fields_for :shop_image do |i|
+            = i.file_field :shop_image, type: 'file', class: "img-file"
+          = f.label :image, class: 'image' do
+            = icon("fas","camera", class: 'camera')
+        - else
+          .shop-num-0.drag-area#image-box__container
+            = f.fields_for :shop_images do |i|
+              = i.file_field :shop_image, type: 'file', class: "img-file", name: "shop[shop_image][]", value:"", style: "display:none", multiple: :true
+              %label{for: "shop_shop_images_attributes_0_shop_image", class: "input-area__label"}
+                %i.fas.fa-camera
+  .field
+    .field__label
+      = f.label :postal_code, '郵便番号'
+    .field__input
+      = f.text_field :postal_code, placeholder: '郵便番号', id: 'shop-postal-code'
+  .field
+    .field__label
+      = f.label :address, '住所'
+    .field__input
+      = f.text_field :address, placeholder: '番地は半角', id: 'shop-address', class: 'field__input--text-type'
+  .field
+    .field__label
+      = f.label :phone_number, '電話番号'
+    .field__input
+      = f.text_field :phone_number, placeholder: '電話番号。ハイフンあり'
+  .field
+    .field__label
+      = f.label :area_id, 'エリア'
+      %span.require *
+    .field__input
+      = f.fields_for :area_id do |i|
+        = i.select :area_id, Area.all.collect {|a| [a.name, a.id]},{include_blank: "選択してください", selected: "#{@shop.area_id}"},{class: 'field__input--checkbox', name: "shop[area_id]", value: "#{@shop.area_id}", required: :true}
+  .field
+    .field__label
+      = f.label :product_id, 'つくれるモノ'
+      %span.require *
+    .field__input
+      = f.fields_for :product_id do |i|
+        = i.select :product_id, Product.all.collect {|a| [a.name, a.id]},{include_blank: "選択してください", selected: "#{@shop.product_id}"},{class: 'field__input--checkbox', name: "shop[product_id]", value: "#{@shop.product_id}", required: :true}
+  .field
+    = f.submit '登録', class: 'shop-send-btn'
