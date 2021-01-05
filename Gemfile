@@ -42,6 +42,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'factory_bot_rails', '5.2.0'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -76,3 +77,7 @@ gem 'devise-i18n-views'
 
 gem 'carrierwave'
 gem 'rmagick'
+
+group :production do
+  gem 'pg'
+end

@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: CappanAtelier_production
   username: CappanAtelier
   password: <%= ENV['CAPPANATELIER_DATABASE_PASSWORD'] %>
