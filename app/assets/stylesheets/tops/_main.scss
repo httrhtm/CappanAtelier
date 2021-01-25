@@ -15,7 +15,7 @@
   max-width: 1600px;
   min-width: 1280px;
   margin: 0 auto;
-  padding: 24px 64px;
+  padding: 24px 60px 64px 64px;
   .search-main {
     min-width: 800px;
     width: 960px;
@@ -117,7 +117,7 @@
               display: block;
               width: 136px;
               margin: 8px 8px 8px 0;
-              color: white;
+              color:  white;
               font-weight: bold;
               text-align: center;
               cursor: pointer;
@@ -181,8 +181,9 @@
             .swiper-slide {
               position: relative;
               img {
-                width: 100%;
-                height: auto;
+                height: 250px;
+                width: 400px;
+                object-fit: cover;
               }
             }
           }

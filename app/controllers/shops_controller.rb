@@ -22,9 +22,9 @@ class ShopsController < ApplicationController
 
   end
 
-  # def show
-  #   # @shop = Shop.find(params[:id])
-  # end
+  def show
+    # @shop = Shop.find(params[:id])
+  end
 
   private
   def new_shop

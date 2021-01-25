@@ -2,7 +2,7 @@
   .home-header-contents
     .home-header-top
       .app-icon-box 
-        =link_to image_tag('/logo (2).png', alt: 'CAPPAN.com'), "/"
+        =link_to image_tag('', alt: 'クレログ。'), "/"
       .home-menu
         %ul.menu-lists
           - if user_signed_in?
@@ -21,13 +21,13 @@
               =link_to "会員登録", "users/sign_up"
 
     .header-message-box
-      %h1 活版印刷のお店探しは
-      %h1 CAPPAN.com
+      %p クレープのまとめサイト
+      %h1 クレログ。
 
     .home-search-form
       .form-explanation エリア・キーワードから探す
       .search-box
         %form.shop_search
-          %input{class: "search-box__content left-content", name: "key", type: "text", placeholder: "キーワード[例:活版印刷]"}
-          %input{class: "search-box__content right-content", name: "key", type: "text", placeholder: "エリア[例:東京]"}
+          %input{class: "search-box__content left-content", name: "key", type: "text", placeholder: "キーワード ( 例 : チョコバナナ )"}
+          %input{class: "search-box__content right-content", name: "key", type: "text", placeholder: "エリア ( 例 : 原宿 )"}
           %input{type: "submit", value: "検索", class: "search-box__submit"}
